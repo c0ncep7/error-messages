@@ -14,7 +14,7 @@ const App = () => {
       .then(data => {
         setImages(data);
         if (data.length > 0) {
-          setRandomToken();
+          setRandomToken(); // Display a random token on initial load
         }
       })
       .catch(error => console.error('Error loading metadata:', error));
@@ -101,12 +101,6 @@ const App = () => {
     }
   };
 
-  useEffect(() => {
-    if (images.length > 0) {
-      changeImage(currentIndex);
-    }
-  }, [images]);
-
   return (
     <div className="app-container">
       <div className="retro-computer">
@@ -124,7 +118,12 @@ const App = () => {
                 <div className="progress" style={{ width: `${progress}%` }}></div>
               </div>
             )}
-            <img id="main-image" alt="Retro computer screen" className={`display-image ${loading ? 'hidden' : ''}`} />
+            <img
+              id="main-image"
+              alt="Retro computer screen"
+              src={images[currentIndex]?.URL || `${process.env.PUBLIC_URL}/generic-404.webp`}
+              className={`display-image ${loading ? 'hidden' : ''}`}
+            />
           </div>
           <div className="metadata">
             {images.length > 0 && (
