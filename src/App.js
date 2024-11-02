@@ -9,42 +9,53 @@ const App = () => {
   const [tokenId, setTokenId] = useState('');
 
   useEffect(() => {
-    // Load metadata from the public folder and extract data
     fetch(`${process.env.PUBLIC_URL}/m0dest--error-messages.json`)
       .then(response => response.json())
       .then(data => {
         setImages(data);
-        if (data.length > 0) setTokenId(data[0].tokenId); // Set initial tokenId
+        if (data.length > 0) {
+          setRandomToken();
+        }
       })
       .catch(error => console.error('Error loading metadata:', error));
   }, []);
 
   const loadImage = (url) => {
-    return new Promise((resolve, reject) => {
-      setLoading(true);
-      setProgress(0);
-      const xhr = new XMLHttpRequest();
-      xhr.open("GET", url, true);
-      xhr.responseType = "blob";
+    setLoading(true);
+    setProgress(0);
 
-      xhr.onprogress = (event) => {
-        if (event.lengthComputable) {
-          const percentComplete = Math.round((event.loaded / event.total) * 100);
-          setProgress(percentComplete);
+    return new Promise(async (resolve, reject) => {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error("Failed to load image");
         }
-      };
 
-      xhr.onload = () => {
-        if (xhr.status === 200) {
-          setLoading(false);
-          resolve(URL.createObjectURL(xhr.response));
-        } else {
-          reject(new Error("Failed to load image"));
+        const contentLength = response.headers.get('content-length');
+        const total = parseInt(contentLength, 10);
+        let loaded = 0;
+
+        const reader = response.body.getReader();
+        const chunks = [];
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          if (value) {
+            chunks.push(value);
+            loaded += value.length;
+            setProgress(Math.round((loaded / total) * 100));
+          }
         }
-      };
 
-      xhr.onerror = () => reject(new Error("Network error"));
-      xhr.send();
+        const blob = new Blob(chunks);
+        const imageUrl = URL.createObjectURL(blob);
+        setLoading(false);
+        resolve(imageUrl);
+      } catch (error) {
+        setLoading(false);
+        reject(error);
+      }
     });
   };
 
@@ -54,7 +65,14 @@ const App = () => {
     const imageUrl = await loadImage(url);
     document.getElementById("main-image").src = imageUrl;
     setCurrentIndex(index);
-    setTokenId(images[index].tokenId); // Reflect current tokenId in the input
+    setTokenId(images[index].tokenId);
+  };
+
+  const setRandomToken = () => {
+    if (images.length > 0) {
+      const randomIndex = Math.floor(Math.random() * images.length);
+      changeImage(randomIndex);
+    }
   };
 
   const nextImage = () => {
@@ -92,9 +110,15 @@ const App = () => {
   return (
     <div className="app-container">
       <div className="retro-computer">
-        {loading && <div className="error-message">404 NOT FOUND -  REQUESTED URL NOT FOUND ON THIS SERVER</div>}
         <div className="screen">
-          <div className="image-container">
+          <div
+            className="image-container"
+            style={{
+              backgroundImage: loading ? `url(${process.env.PUBLIC_URL}/generic-404.webp)` : 'none',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
             {loading && (
               <div className="loading-bar">
                 <div className="progress" style={{ width: `${progress}%` }}></div>
@@ -112,7 +136,7 @@ const App = () => {
               </>
             )}
             <div className="token-input-container">
-              <label htmlFor="tokenId">Enter Token ID (1-60):</label>
+              <label htmlFor="tokenId">Token ID:</label>
               <input
                 type="number"
                 id="tokenId"
@@ -121,8 +145,10 @@ const App = () => {
                 min="1"
                 max="60"
                 placeholder="1-60"
+                className="token-input"
               />
-              <button onClick={goToTokenId} disabled={!tokenId}>Go</button>
+              <button onClick={goToTokenId} disabled={!tokenId} className="nav-button">Go</button>
+              <button onClick={setRandomToken} className="nav-button random-full-width">Random</button>
             </div>
           </div>
         </div>
