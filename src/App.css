@@ -1,38 +1,189 @@
-.App {
-  text-align: center;
+
+body {
+  background-color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.retro-computer {
+  max-width: 90%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  color: black;
+  font-family: 'Courier New', monospace;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.error-message {
+  font-size: 2rem;
+  font-weight: bold;
+  color: red;
+  margin-bottom: 20px;
+}
+
+.screen {
+  display: flex;
+  justify-content: space-between;
+  border: 5px solid #ccc;
+  background: #f4f4f4;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.image-container {
+  width: 70%;
+  position: relative;
+}
+
+.metadata {
+  width: 25%;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding-left: 20px;
+  border-left: 2px solid #ccc;
+}
+
+/* Adjust layout for small screens */
+@media (max-width: 768px) {
+  .screen {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+  }
+
+  .image-container,
+  .metadata {
+    width: 100%; /* Full width for both image and metadata */
+    padding: 10px 0;
+    border-left: none;
+  }
+
+  .metadata {
+    border-top: 2px solid #ccc;
+    padding-top: 20px; /* Add space above metadata */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.display-image {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1920 / 1080;
+  filter: grayscale(100%) contrast(1.2);
+  transition: opacity 0.3s ease-in;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.loading-bar {
+  width: 100%;
+  height: 20px;
+  background: #ddd;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px 5px 0 0;
+}
+
+.progress {
+  height: 100%;
+  background: black;
+  transition: width 0.3s;
+}
+
+.controls {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.nav-button {
+  background: none;
+  color: black;
+  border: 2px solid black;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.nav-button:hover {
+  background: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.token-input-container {
+  margin-top: 20px;
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.token-input-container label {
+  color: black;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.token-input-container input {
+  width: 80px;
+  padding: 10px;
+  margin: 0 10px;
+  background: #f4f4f4;
+  color: black;
+  border: 2px solid black;
+  font-family: 'Courier New', monospace;
+  font-size: 1.25rem;
+}
+
+.token-input-container button {
+  padding: 10px 15px;
+  background: black;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.token-input-container button:disabled {
+  background: #ddd;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.scrolling-text {
+  margin-top: 20px;
+  max-height: 150px;
+  overflow-y: scroll;
+  color: black;
+  padding: 10px;
+  border-top: 2px solid black;
+}
+
+.link-section {
+  margin-top: 20px;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.link-section a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.link-section a:hover {
+  color: gray;
 }
