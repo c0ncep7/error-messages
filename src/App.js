@@ -92,7 +92,7 @@ const App = () => {
   return (
     <div className="app-container">
       <div className="retro-computer">
-        {loading && <div className="error-message">404 NOT FOUND -  REQUETED URL NOT FOUND ON THIS SERVER</div>}
+        {loading && <div className="error-message">404 NOT FOUND -  REQUESTED URL NOT FOUND ON THIS SERVER</div>}
         <div className="screen">
           <div className="image-container">
             {loading && (
