@@ -3,25 +3,32 @@ import './App.css';
 
 const App = () => {
   const [images, setImages] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(null); // Start as null to avoid early renders
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState(0);
   const [tokenId, setTokenId] = useState('');
 
+  // Load metadata and choose a random image once
   useEffect(() => {
+    console.log("Fetching metadata...");
     fetch(`${process.env.PUBLIC_URL}/m0dest--error-messages.json`)
       .then(response => response.json())
       .then(data => {
         if (data && data.length > 0) {
           setImages(data);
           const randomIndex = Math.floor(Math.random() * data.length);
-          changeImage(randomIndex); // Load a random image on initial load
+          console.log("Initial random image selected:", data[randomIndex].URL);
+          loadImage(data[randomIndex].URL); // Load initial random image
+          setCurrentIndex(randomIndex); // Set the random image index
+          setTokenId(data[randomIndex].tokenId); // Set initial token ID
         }
       })
       .catch(error => console.error('Error loading metadata:', error));
   }, []);
 
+  // Load image from URL and update the main image display
   const loadImage = (url) => {
+    console.log("Fetching image:", url);
     setLoading(true);
     setProgress(0);
 
@@ -51,6 +58,7 @@ const App = () => {
 
         const blob = new Blob(chunks);
         const imageUrl = URL.createObjectURL(blob);
+        document.getElementById("main-image").src = imageUrl;
         setLoading(false);
         resolve(imageUrl);
       } catch (error) {
@@ -60,47 +68,42 @@ const App = () => {
     });
   };
 
-  const changeImage = async (index) => {
-    if (images.length === 0 || !images[index]) return; // Check if images is populated and index is valid
-    setProgress(0);
-    const url = images[index].URL;
-    const imageUrl = await loadImage(url);
-    document.getElementById("main-image").src = imageUrl;
-    setCurrentIndex(index);
-    setTokenId(images[index].tokenId);
-  };
-
-  const setRandomToken = () => {
-    if (images.length > 0) {
-      const randomIndex = Math.floor(Math.random() * images.length);
-      changeImage(randomIndex);
+  const changeImage = (index) => {
+    if (images.length > 0 && images[index]) {
+      console.log("Changing image to index:", index, "URL:", images[index].URL);
+      loadImage(images[index].URL);
+      setCurrentIndex(index);
+      setTokenId(images[index].tokenId);
     }
   };
 
+  // Control functions with logging
   const nextImage = () => {
+    console.log("Next button clicked");
     const nextIndex = (currentIndex + 1) % images.length;
     changeImage(nextIndex);
   };
 
   const prevImage = () => {
+    console.log("Previous button clicked");
     const prevIndex = (currentIndex - 1 + images.length) % images.length;
     changeImage(prevIndex);
   };
 
-  const handleTokenIdInput = (e) => {
-    const value = parseInt(e.target.value);
-    if (!isNaN(value) && value >= 1 && value <= 60) {
-      setTokenId(value);
-    } else {
-      setTokenId('');
-    }
-  };
-
   const goToTokenId = () => {
+    console.log("Go button clicked for Token ID:", tokenId);
     const targetIndex = images.findIndex(img => img.tokenId === tokenId);
     if (targetIndex >= 0) {
       changeImage(targetIndex);
+    } else {
+      console.log("Token ID not found:", tokenId);
     }
+  };
+
+  const setRandomImage = () => {
+    console.log("Random button clicked");
+    const randomIndex = Math.floor(Math.random() * images.length);
+    changeImage(randomIndex);
   };
 
   return (
@@ -123,12 +126,11 @@ const App = () => {
             <img
               id="main-image"
               alt="Retro computer screen"
-              src={images[currentIndex]?.URL || `${process.env.PUBLIC_URL}/generic-404.webp`}
               className={`display-image ${loading ? 'hidden' : ''}`}
             />
           </div>
           <div className="metadata">
-            {images.length > 0 && (
+            {images.length > 0 && currentIndex !== null && (
               <>
                 <p><strong>Token ID:</strong> {images[currentIndex].tokenId} | <strong>Frame:</strong> {images[currentIndex].attributes.find(attr => attr.trait_type === 'frame')?.value}</p>
               </>
@@ -140,7 +142,7 @@ const App = () => {
                   type="number"
                   id="tokenId"
                   value={tokenId}
-                  onChange={handleTokenIdInput}
+                  onChange={(e) => setTokenId(parseInt(e.target.value) || '')}
                   min="1"
                   max="60"
                   placeholder="1-60"
@@ -148,7 +150,7 @@ const App = () => {
                 />
               </div>
               <button onClick={goToTokenId} disabled={!tokenId} className="nav-button">Go</button>
-              <button onClick={setRandomToken} className="random-full-width">Random</button>
+              <button onClick={setRandomImage} className="random-full-width">Random</button>
               <div className="next-prev-container">
                 <button onClick={prevImage} className="nav-button">&lt; Prev</button>
                 <button onClick={nextImage} className="nav-button">Next &gt;</button>
