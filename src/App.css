@@ -39,12 +39,10 @@ body {
 
 .image-container {
   width: 70%;
-  position: relative; /* Ensures loading bar is positioned within */
+  position: relative;
   background-size: cover;
   background-position: center;
 }
-
-
 
 .loading-bar {
   position: absolute;
@@ -53,7 +51,7 @@ body {
   width: 100%;
   height: 20px;
   background: #ddd;
-  z-index: 1; /* Ensures loading bar appears above background */
+  z-index: 1;
 }
 
 .progress {
@@ -101,29 +99,6 @@ body {
   }
 }
 
-.controls {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.nav-button {
-  background: white;
-  color: black;
-  border: 2px solid black;
-  padding: 15px 20px;
-  cursor: pointer;
-  font-size: 1.5rem;
-  font-weight: bold;
-  transition: background 0.2s;
-  text-align: center;
-}
-
-.nav-button:hover {
-  background: black;
-  color: white;
-}
-
 .token-input-container {
   display: flex;
   flex-direction: column;
@@ -131,28 +106,67 @@ body {
   margin-top: 20px;
 }
 
+.token-input-row {
+  display: flex;
+  align-items: center;
+}
+
 .token-input-container label {
   color: black;
   font-size: 1.25rem;
   font-weight: bold;
+  margin-right: 10px;
 }
 
 .token-input-container input {
-  width: 80px;
   padding: 10px;
+  width: 10%;
   background: #f4f4f4;
   color: black;
   border: 2px solid black;
   font-family: 'Courier New', monospace;
   font-size: 1.25rem;
-  margin-left: 5px;
 }
 
+.nav-button,
+.random-full-width,
+.token-input-container button {
+  background: white;
+  color: black;
+  border: 2px solid black;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.nav-button:hover,
+.random-full-width:hover,
+.token-input-container button:hover {
+  background: black;
+  color: white;
+}
+
+/* Random button styling */
 .random-full-width {
   display: block;
   width: 100%;
+  margin-top: 10px;
 }
 
+/* Flex container for the Previous and Next buttons */
+.next-prev-container {
+  display: flex;
+  width: 100%;
+}
+
+.next-prev-container .nav-button {
+  flex: 1;
+}
+
+/* Disabled Go button styling */
 .token-input-container button:disabled {
   background: #ddd;
   color: #aaa;

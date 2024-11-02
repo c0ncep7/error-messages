@@ -12,9 +12,10 @@ const App = () => {
     fetch(`${process.env.PUBLIC_URL}/m0dest--error-messages.json`)
       .then(response => response.json())
       .then(data => {
-        setImages(data);
-        if (data.length > 0) {
-          setRandomToken(); // Display a random token on initial load
+        if (data && data.length > 0) {
+          setImages(data);
+          const randomIndex = Math.floor(Math.random() * data.length);
+          changeImage(randomIndex); // Load a random image on initial load
         }
       })
       .catch(error => console.error('Error loading metadata:', error));
@@ -60,6 +61,7 @@ const App = () => {
   };
 
   const changeImage = async (index) => {
+    if (images.length === 0 || !images[index]) return; // Check if images is populated and index is valid
     setProgress(0);
     const url = images[index].URL;
     const imageUrl = await loadImage(url);
@@ -128,32 +130,31 @@ const App = () => {
           <div className="metadata">
             {images.length > 0 && (
               <>
-                <p><strong>Token ID:</strong> {images[currentIndex].tokenId}</p>
-                {images[currentIndex].attributes.map((attr, index) => (
-                  <p key={index}><strong>{attr.trait_type}:</strong> {attr.value}</p>
-                ))}
+                <p><strong>Token ID:</strong> {images[currentIndex].tokenId} | <strong>Frame:</strong> {images[currentIndex].attributes.find(attr => attr.trait_type === 'frame')?.value}</p>
               </>
             )}
             <div className="token-input-container">
-              <label htmlFor="tokenId">Token ID:</label>
-              <input
-                type="number"
-                id="tokenId"
-                value={tokenId}
-                onChange={handleTokenIdInput}
-                min="1"
-                max="60"
-                placeholder="1-60"
-                className="token-input"
-              />
+              <div className="token-input-row">
+                <label htmlFor="tokenId">Token ID:</label>
+                <input
+                  type="number"
+                  id="tokenId"
+                  value={tokenId}
+                  onChange={handleTokenIdInput}
+                  min="1"
+                  max="60"
+                  placeholder="1-60"
+                  className="token-input"
+                />
+              </div>
               <button onClick={goToTokenId} disabled={!tokenId} className="nav-button">Go</button>
-              <button onClick={setRandomToken} className="nav-button random-full-width">Random</button>
+              <button onClick={setRandomToken} className="random-full-width">Random</button>
+              <div className="next-prev-container">
+                <button onClick={prevImage} className="nav-button">&lt; Prev</button>
+                <button onClick={nextImage} className="nav-button">Next &gt;</button>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="controls">
-          <button onClick={prevImage} className="nav-button">&lt; Prev</button>
-          <button onClick={nextImage} className="nav-button">Next &gt;</button>
         </div>
         <div className="link-section">
           <a href="https://www.errormessages.xyz/404" target="_blank" rel="noopener noreferrer">
