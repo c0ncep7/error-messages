@@ -1,0 +1,687 @@
+[
+  {
+    "tokenId": 1,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "yellow"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmSpCTPZcMa1wtkt6Y4tbsNVudkUsMQwUR84s7GdddscoQ/media"
+  },
+  {
+    "tokenId": 2,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmXuLaxSsLUNbru8wQGzKRQ6ny63bWV3QdgPLY5cV2kerC/media"
+  },
+  {
+    "tokenId": 3,
+    "attributes": [],
+    "URL": "https://w3s.link/ipfs/QmWYUPLYGDdosyYdzCLxjsw6BdfwwtWtut7XHSVjdu63Cm/media"
+  },
+  {
+    "tokenId": 4,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "white"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmR4RQeS9q6jhVjw88cPJvMWogU7DUdPNVmaNZHVi3tmSy/media"
+  },
+  {
+    "tokenId": 5,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "orange"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmWSYVwQyn6sK8uBgj3StqCSmHLfwGrpEbedHFtkmjNn89/media"
+  },
+  {
+    "tokenId": 6,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "gray"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmNMN2uxwq1Ck3vSNssn4Vbh2SUVGmAkbqbhgKu4DzR4Rj/media"
+  },
+  {
+    "tokenId": 7,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "white"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmeT2vhcCSzHeVqL4oqis1BraRu5Tywg43BBTnmMPyW2mQ/media"
+  },
+  {
+    "tokenId": 8,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "orange"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmZRMeJP3dNmmnQzfLGQcvvZc36WNTJPDr9doqmqnJ4JSW/media"
+  },
+  {
+    "tokenId": 9,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "purple"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmaE5fY12vrjQ6xqMn1Km79C3XVyGrddCTGCvgSWiNDWcP/media"
+  },
+  {
+    "tokenId": 10,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmZwBqhgnn6bBeGPRz3jK3NfJgUbQ3gcttoh4Uq9yoGkvt/media"
+  },
+  {
+    "tokenId": 11,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "white"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmU2tm1DE5WBfHTimufMWsTFWQr2QTKo9YJBkdn8qp8pbp/media"
+  },
+  {
+    "tokenId": 12,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "white"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmcfSpt54nyo4NHG2BoxuorsU5wcgeDJY2sFNTPks2nkyd/media"
+  },
+  {
+    "tokenId": 13,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/Qmc3QVG88BPHnUrtPQxuSUv2t7QxtVYeDnnE2BoyvjJBXa/media"
+  },
+  {
+    "tokenId": 14,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "gray"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmWFdpu7qGrJdQHz91XBEnii5HerBrcxrDxZjs7GxxLgjr/media"
+  },
+  {
+    "tokenId": 15,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmS5vzF8sRDTj1GMeHuwBjyfutgaXkZ4tMZTpSysNkQsbB/media"
+  },
+  {
+    "tokenId": 16,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "white"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmVub7AKjC6KN95gKqcQfY48Z8D4iMoPxKhZ1o3ryH6utf/media"
+  },
+  {
+    "tokenId": 17,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "white"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmPKzVKiNDENix86Q599QhsW2dYzCj2esTBzNdWSTXgjUy/media"
+  },
+  {
+    "tokenId": 18,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/Qmd454p2EHQXSzeyv2kK2AKUw5Qy8bnzYhkJ1VTvcVRDBM/media"
+  },
+  {
+    "tokenId": 19,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmTcpKVG3uo5qdrypgAfrpLaHCMyVeCWiKDm6TBrA4ekq8/media"
+  },
+  {
+    "tokenId": 20,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "white"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmZZWWG716UsYnGfq3FDSB77QCXxMfk8kkQV8k2JCXiPbT/media"
+  },
+  {
+    "tokenId": 21,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmcMEk7y72ZcLFPPEoQgfS86nFUUDpGd1jwffUbNVsuJau/media"
+  },
+  {
+    "tokenId": 22,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmWMxrqFuwwMwFJ838zUeYsbEdWhBe95SjkQQQQrBaWN5o/media"
+  },
+  {
+    "tokenId": 23,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmYy6F4oM4Hth5Bixn8A8YF2BAgd4MiWiY6XjfjbogjnBv/media"
+  },
+  {
+    "tokenId": 24,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "purple"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmWuLdVC1xgUPMJwbY2HGgE11yV25UZPqUkbwGPSq8hNcS/media"
+  },
+  {
+    "tokenId": 25,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "yellow"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmXyXWJRaa8XdwDxeWrEjxnZA6KXgmeMKZ1nrwhAwD7QEf/media"
+  },
+  {
+    "tokenId": 26,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "gray"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmYiCwxLRhVCgX9fHnwDP5Vejd7gmzN9EVzadR7aWShcfL/media"
+  },
+  {
+    "tokenId": 27,
+    "attributes": [],
+    "URL": "https://w3s.link/ipfs/QmcwdpAFQqx8nB7Gba7vzK3y77PiEbhWhzExNc6BdFjsV4/media"
+  },
+  {
+    "tokenId": 28,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmQA3KC86YpQUDkCL9Te5SNZEYyF1k3edbRtu7YLCfbJ4A/media"
+  },
+  {
+    "tokenId": 29,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmProXRZfYmLPpRuAnwZMtofgkZbzWdous4pTNXBFhMQhK/media"
+  },
+  {
+    "tokenId": 30,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmT8fhy3GFRsukfrS4tD8Abfo7jhGseknhJHwK4zxNf5da/media"
+  },
+  {
+    "tokenId": 31,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "gray"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmSkMr3NyJ8xkZ1KkJjXhuWSzY4AyQmpNd8exexrErPiqv/media"
+  },
+  {
+    "tokenId": 32,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "purple"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmUu3SEqnzcTYAsZkYbgnrtb3DhnJBs9izLzRoHRs5tGeL/media"
+  },
+  {
+    "tokenId": 33,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "white"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmXUjWMnJG4tuJuUoHvfGW3TjVh4TPnv3fEtTEbGvkWMmE/media"
+  },
+  {
+    "tokenId": 34,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmRQTNYbSbQr3Z7FRYPWxv1JV4EamekwSrqSnenSYQDoNg/media"
+  },
+  {
+    "tokenId": 35,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmedRn9MtyMSTht69VtRHQZQQfs6Mkd2NTwngobQ58euA8/media"
+  },
+  {
+    "tokenId": 36,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "gray"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmSWpX7azjfaqmGn31LaFnUqG3i7T3NEdW755Qp2iHYLnW/media"
+  },
+  {
+    "tokenId": 37,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmYCJFDdV924BNwJ3XwUQHYTMcGedGG2RtDCLM9qp39BYq/media"
+  },
+  {
+    "tokenId": 38,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "gray"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmSQVhXbVXBWdXQkzAjvK3i72vS9PMtCds8781pGDKzUho/media"
+  },
+  {
+    "tokenId": 39,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "orange"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmbkT16Q35XtTfWLzppFjoZTL2dTETXAuJG37g1Ko5hUdZ/media"
+  },
+  {
+    "tokenId": 40,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmcvmWew2sjsYXcAo3wxRL6inMXLXB34Her4eZwKQfpJ5w/media"
+  },
+  {
+    "tokenId": 41,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "orange"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmPnKSYeDgbqCQVNBmFfrDsu8ayeHtq3o7ae3oDPrgD7Ga/media"
+  },
+  {
+    "tokenId": 42,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "gray"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmQXXzn7r1PWePSc6bBsZxgLkxLatZR5K2aA7piTxjEKh2/media"
+  },
+  {
+    "tokenId": 43,
+    "attributes": [],
+    "URL": "https://w3s.link/ipfs/QmYqkRDk6zHCeKCKoCFBzgyyxWp8cFsKVBhvQWfpKonLFn/media"
+  },
+  {
+    "tokenId": 44,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmZgtixCG5wBfsgyDZKLyXHy5D7AUaifhL9LM4hCWuD13x/media"
+  },
+  {
+    "tokenId": 45,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "yellow"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmX44Gdp6Z9eTpjDjW3XDXyuAHxtKk46ZiKXGUaagCZUwS/media"
+  },
+  {
+    "tokenId": 46,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "purple"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmRJkfkaAiqhNwyZddX89yHh8Cx9xJHAMbHoycboSmB36U/media"
+  },
+  {
+    "tokenId": 47,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmPFq1kFXYAAoggvtoVtC8nnC7o5v2LghGPRr4fGaUHTWR/media"
+  },
+  {
+    "tokenId": 48,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "yellow"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmTKYzv5SJmYTEPmsTyVdELA2ycbxEBTNcwe2ft93jxn3d/media"
+  },
+  {
+    "tokenId": 49,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "orange"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmSBBWN88eaWN1CCdfVmcDJhJEJYbTs19AVzSAsUKvLnj7/media"
+  },
+  {
+    "tokenId": 50,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmZorhc4Hqemm1yJb1DvKSAExsv7FATkocukqgLQLUvZvd/media"
+  },
+  {
+    "tokenId": 51,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmcH2CX7U7Y4taiHFj534RR4UbbyeRtxqQxYgH8JSu4qcJ/media"
+  },
+  {
+    "tokenId": 52,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "white"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmWtaJWa3bfRLHiwo6B83fifEK8fqvyz9dHVsgzu8LiBMX/media"
+  },
+  {
+    "tokenId": 53,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmTuV4BEo8J6ygqnx595SUEmskn2T44SFFy78TkbHKoPEt/media"
+  },
+  {
+    "tokenId": 54,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "yellow"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmUsWYSK8ChhBSELACEisC5vNWpyfBwhfKkUr5hZsMhKW1/media"
+  },
+  {
+    "tokenId": 55,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "yellow"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/Qmf9qVrevYgguMesDY758ykKhqopnCUL8Pe9RpQDg2D28i/media"
+  },
+  {
+    "tokenId": 56,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmY6Bzi3aH5oH7LjWFAHW2SZ2jj5fX969cB9eTEmPnFreQ/media"
+  },
+  {
+    "tokenId": 57,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "white"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/Qmf32xBGeF3KF5XdFiqenuduMgZsnPGc2ZLn4JnwmykDsy/media"
+  },
+  {
+    "tokenId": 58,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmeYQDjUt2GPZkGXxe4DBBDhSgCZmh8DsEY4QFkkXVKkmE/media"
+  },
+  {
+    "tokenId": 59,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "purple"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmVBGPSQkDHSG6uhUCoz9s9qahfZr9q6oRxMCmYkW9boxf/media"
+  },
+  {
+    "tokenId": 60,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "yellow"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmQyVGHWFgs6xqfVcbsUebT8sboCexi6bk7CxMHJPevDg5/media"
+  },
+  {
+    "tokenId": 61,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmQyVGHWFgs6xqfVcbsUebT8sboCexi6bk7CxMHJPevDg5/media"
+  },
+  {
+    "tokenId": 62,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "orange"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmQyVGHWFgs6xqfVcbsUebT8sboCexi6bk7CxMHJPevDg5/media"
+  },
+  {
+    "tokenId": 63,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "yellow"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmQyVGHWFgs6xqfVcbsUebT8sboCexi6bk7CxMHJPevDg5/media"
+  },
+  {
+    "tokenId": 64,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "black"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmQyVGHWFgs6xqfVcbsUebT8sboCexi6bk7CxMHJPevDg5/media"
+  },
+  {
+    "tokenId": 65,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "yellow"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmQyVGHWFgs6xqfVcbsUebT8sboCexi6bk7CxMHJPevDg5/media"
+  },
+  {
+    "tokenId": 66,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "purple"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmQyVGHWFgs6xqfVcbsUebT8sboCexi6bk7CxMHJPevDg5/media"
+  },
+  {
+    "tokenId": 66,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "purple"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmQyVGHWFgs6xqfVcbsUebT8sboCexi6bk7CxMHJPevDg5/media"
+  },
+  {
+    "tokenId": 67,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": "purple"
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmQyVGHWFgs6xqfVcbsUebT8sboCexi6bk7CxMHJPevDg5/media"
+  },
+  {
+    "tokenId": 68,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": ""
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmQyVGHWFgs6xqfVcbsUebT8sboCexi6bk7CxMHJPevDg5/media"
+  },
+  {
+    "tokenId": 69,
+    "attributes": [
+      {
+        "trait_type": "frame",
+        "value": ""
+      }
+    ],
+    "URL": "https://w3s.link/ipfs/QmQyVGHWFgs6xqfVcbsUebT8sboCexi6bk7CxMHJPevDg5/media"
+  }
+]

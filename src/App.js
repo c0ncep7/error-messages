@@ -3,40 +3,40 @@ import './App.css';
 
 const App = () => {
   const [images, setImages] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(null); // Start as null to avoid early renders
+  const [currentIndex, setCurrentIndex] = useState(null);
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState(0);
   const [tokenId, setTokenId] = useState('');
+  const [mediaType, setMediaType] = useState('image');
 
-  // Load metadata and choose a random image once
   useEffect(() => {
-    console.log("Fetching metadata...");
     fetch(`${process.env.PUBLIC_URL}/m0dest--error-messages.json`)
       .then(response => response.json())
       .then(data => {
         if (data && data.length > 0) {
           setImages(data);
           const randomIndex = Math.floor(Math.random() * data.length);
-          console.log("Initial random image selected:", data[randomIndex].URL);
-          loadImage(data[randomIndex].URL); // Load initial random image
-          setCurrentIndex(randomIndex); // Set the random image index
-          setTokenId(data[randomIndex].tokenId); // Set initial token ID
+          loadImage(data[randomIndex].URL);
+          setCurrentIndex(randomIndex);
+          setTokenId(data[randomIndex].tokenId);
         }
       })
       .catch(error => console.error('Error loading metadata:', error));
   }, []);
 
-  // Load image from URL and update the main image display
   const loadImage = (url) => {
-    console.log("Fetching image:", url);
     setLoading(true);
     setProgress(0);
+
+    const extension = url.split('.').pop().toLowerCase();
+    setMediaType((extension === 'mov' || extension === 'mp4') ? 'video' : 'image');
+
 
     return new Promise(async (resolve, reject) => {
       try {
         const response = await fetch(url);
         if (!response.ok) {
-          throw new Error("Failed to load image");
+          throw new Error("Failed to load media");
         }
 
         const contentLength = response.headers.get('content-length');
@@ -57,10 +57,17 @@ const App = () => {
         }
 
         const blob = new Blob(chunks);
-        const imageUrl = URL.createObjectURL(blob);
-        document.getElementById("main-image").src = imageUrl;
+        const mediaUrl = URL.createObjectURL(blob);
+        const mediaElement = document.getElementById("main-media");
+        if (mediaElement) {
+          mediaElement.src = mediaUrl;
+          if (mediaType === 'video') {
+            mediaElement.load();
+          }
+        }
+
         setLoading(false);
-        resolve(imageUrl);
+        resolve(mediaUrl);
       } catch (error) {
         setLoading(false);
         reject(error);
@@ -70,38 +77,30 @@ const App = () => {
 
   const changeImage = (index) => {
     if (images.length > 0 && images[index]) {
-      console.log("Changing image to index:", index, "URL:", images[index].URL);
       loadImage(images[index].URL);
       setCurrentIndex(index);
       setTokenId(images[index].tokenId);
     }
   };
 
-  // Control functions with logging
   const nextImage = () => {
-    console.log("Next button clicked");
     const nextIndex = (currentIndex + 1) % images.length;
     changeImage(nextIndex);
   };
 
   const prevImage = () => {
-    console.log("Previous button clicked");
     const prevIndex = (currentIndex - 1 + images.length) % images.length;
     changeImage(prevIndex);
   };
 
   const goToTokenId = () => {
-    console.log("Go button clicked for Token ID:", tokenId);
     const targetIndex = images.findIndex(img => img.tokenId === tokenId);
     if (targetIndex >= 0) {
       changeImage(targetIndex);
-    } else {
-      console.log("Token ID not found:", tokenId);
     }
   };
 
   const setRandomImage = () => {
-    console.log("Random button clicked");
     const randomIndex = Math.floor(Math.random() * images.length);
     changeImage(randomIndex);
   };
@@ -123,11 +122,11 @@ const App = () => {
                 <div className="progress" style={{ width: `${progress}%` }}></div>
               </div>
             )}
-            <img
-              id="main-image"
-              alt="Retro computer screen"
-              className={`display-image ${loading ? 'hidden' : ''}`}
-            />
+            {mediaType === 'image' ? (
+              <img id="main-media" alt="Retro computer screen" className={`display-image ${loading ? 'hidden' : ''}`} />
+            ) : (
+              <video id="main-media" className={`display-image ${loading ? 'hidden' : ''}`} controls autoPlay muted loop />
+            )}
           </div>
           <div className="metadata">
             {images.length > 0 && currentIndex !== null && (
@@ -144,8 +143,8 @@ const App = () => {
                   value={tokenId}
                   onChange={(e) => setTokenId(parseInt(e.target.value) || '')}
                   min="1"
-                  max="60"
-                  placeholder="1-60"
+                  max="69"
+                  placeholder="1-69"
                   className="token-input"
                 />
               </div>
